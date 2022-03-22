@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="left_triangle"></div>
+    <div class="left_triangle_back"></div>
+    <div class="right_triangle"></div>
+    <div class="right_triangle_back"></div>
+</div>
+
+<style>
+    body {
+        background: #F2F2B6;
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        width: 280px;
+        height: 130px;
+        margin: 85px auto;
+    }
+
+    div[class*="triangle"] {
+        width: 0;
+        height: 0;
+    }
+
+    div[class*="left"] {
+        border-right: 75px solid transparent;
+        border-bottom: 0px solid transparent;
+        border-left: 75px solid transparent;
+    }
+
+    .left_triangle {
+        border-top: 130px solid #FF6D00;
+    }
+
+    .left_triangle_back {
+        position: absolute;
+        left: 20px;
+        z-index: -1;
+        border-top: 130px solid #FD4602;
+    }
+
+    div[class*="right"] {
+        position: absolute;
+        border-top: 0px solid transparent;
+        border-right: 75px solid transparent;
+        border-left: 75px solid transparent;
+    }
+
+    .right_triangle {
+        right: 20px;
+        border-bottom: 130px solid #FD4602;
+
+    }
+
+    .right_triangle_back {
+        right: 0px;
+        z-index: -1;
+        border-bottom: 130px solid #FF6D00;
+    }
+</style>
